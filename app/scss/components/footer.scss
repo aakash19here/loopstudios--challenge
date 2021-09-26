@@ -1,0 +1,43 @@
+@use '../util' as *;
+
+.footer{
+
+    margin-top: rem(120);
+    width: 100%;
+    background-color: black;
+    @include breakpoint-down(small){
+        text-align: center;
+        img{
+            margin-top: rem(60);
+        }
+        &__socials{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        p{
+            color: var(--dark-gray);
+            vertical-align: bottom;
+            font-family: var(--font-alata);
+            display: inline-block;
+            padding-bottom: rem(70);
+            padding-top: rem(30);
+        }
+    }
+    @include breakpoint(large){
+        &__socials{
+            display: flex;
+            padding: rem(45) rem(90);
+            justify-content: space-between;
+        }
+        &__copyright{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 rem(90) rem(30) rem(90);
+            
+        }
+    }
+    
+}

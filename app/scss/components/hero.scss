@@ -1,0 +1,43 @@
+@use '../util' as *;
+
+.hero{
+    @include breakpoint-down(small){
+        height: 100vh;
+        text-align: center;
+        &__image{
+            padding-top: rem(90);
+            width: 100%;
+            img{
+                width: 80%;
+            }
+        }
+        &__text{
+            .para{
+                padding-left: rem(40);
+                padding-right: rem(40);
+            }
+        }
+    }
+    @include breakpoint(large){
+        height: 100vh;
+        &__wrapper{
+            position: relative;
+        }
+        &__image{
+            padding-top: rem(160);
+            text-align: center;
+            img{
+                vertical-align: top;
+                transform: translateX(-25%);
+            }
+        }
+        &__text{
+            position: absolute;
+            background-color: white;
+            bottom: 0;
+            width: rem(700);
+            padding-left: rem(100);
+            right: 0;
+        }
+    }
+}
